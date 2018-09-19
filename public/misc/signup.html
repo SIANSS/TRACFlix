@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="CSS/xstylus.css">
+<link rel="stylesheet" href="CSS/bootstrap.css">
+<link rel="stylesheet" href="CSS/bootstrap.min.css" type="text/css">
+<script src="JS/script.js" charset="utf-8"></script>
+  <head>
+    <meta charset="utf-8">
+    <title>Create Account - TracFlix</title>
+  </head>
+  <body style="background-image: url(images/waller.jpg) !important; background-repeat: no-repeat; background-size: cover;">
+    <div class="nav-container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header logo-bg">
+            <a href="index.html"><img class="logo" src="images/90s.png" alt="logo"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="xactive"><a href="index.html">Home</a></li>
+            <li><a href="add.html">Add</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="supform">
+      <div class="frm-cont">
+        <span class="frm-login">Sign up</span>
+        <input id="uname" type="text" class="uname" onblur="namevalidation(uname);" placeholder="Name">
+        <p style="color:red;margin-left:32px;" id="namemsg"></p>
+        <input id="email" type="email" class="email" onblur="mailvalidate(email);" placeholder="Email">
+        <p style="color:red;margin-left:32px;" id="mailmsg"></p>
+        <input id="pwd" type="password" class="pwd" onblur="passval(pwd);" placeholder="Password">
+        <div style="display:block; width:72%; border:2px solid gold; margin-left:40px; margin-right:auto;">
+  <strong><p id="up" style="float:right;"> [!] UPPERCASE letters</p>
+          <p id="low"> [<span><strong>!</strong></span>] lowercase letters</p>
+          <p id="num" style="float:right;" > [<span><strong>!</strong></span>] Numbers </p>
+          <p id="length"> [<span><strong>!</strong></span>] Minimum 8 character</p></strong>
+        </div>
+
+        <p class="polpar">By Clicking on sign up. you agree to our <a href="#">terms & conditions</a> and <a href="#">privacy policy</a> </p>
+        <button id="btn-reg" type="button" class="btn btn-default" name="btn-reg" onclick="Register(uname, email, pwd);">Sign up</button>
+        <p class="loglink">Already have an account? <b><a href="login.html">Login Now</a></b> </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="CSS/xstylus.css">
+<link rel="stylesheet" href="CSS/bootstrap.css">
+<link rel="stylesheet" href="CSS/bootstrap.min.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Fjalla+One|Josefin+Sans|Monoton|Muli|News+Cycle|Open+Sans+Condensed:300|Orbitron|Pathway+Gothic+One|Rajdhani|Roboto|Titillium+Web|Work+Sans" rel="stylesheet">
+<script src="JS/script.js" charset="utf-8"></script>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="nav-container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header logo-bg">
+            <a href="index.html"><img class="logo" src="images/90s.png" alt="logo"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="xactive"><a href="#">Add</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="addcont">
+      <div class="chead">
+        <b>ADD TV SHOW</b>
+      </div>
+      <div class="cbody">
+        <form class="">
+          <label for="addval">Name</label>
+          <input id="movieaddbox" class="form-control" type="text" name="addval" placeholder="Enter TV Show Name" onmouseout="checkval(movieaddbox);" onchange="checkval(movieaddbox);">
+
+          <p id="Message2"></p>
+
+          <button id="normbut" class="btn btn-primary" type="button" name="button" disabled=true onclick="output();">Add</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

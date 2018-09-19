@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="CSS/xstylus.css">
+<link rel="stylesheet" href="CSS/bootstrap.css">
+<link rel="stylesheet" href="CSS/bootstrap.min.css" type="text/css">
+<script src="JS/script.js" charset="utf-8"></script>
+  <head>
+    <meta charset="utf-8">
+    <title>Create Account - TracFlix</title>
+  </head>
+  <body style="background-image: url(images/waller.jpg) !important; background-repeat: no-repeat; background-size: cover;">
+    <div class="nav-container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header logo-bg">
+            <a href="index.html"><img class="logo" src="images/90s.png" alt="logo"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="xactive"><a href="index.html">Home</a></li>
+            <li><a href="add.html">Add</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="supform">
+      <div class="frm-cont">
+        <span class="frm-login">Login</span>
+        <input id="mailer" name="email" type="email" class="email" placeholder="Email">
+        <p style="color:red;margin-left:32px;" id="mailmsg"></p>
+        <input id="passsword"  name="pwd" type="password" class="pwd" placeholder="Password">
+        <p id="Message" style="color:red;margin-left:32px;"></p>
+        <button type="button" class="btn btn-default btn-green" name="button" onclick="check(mailer, passsword); return false">Log in</button>
+        <p class="loglink"><b><a href="login.html">Forgot your password</a></b> </p>
+        <p class="loglink">Don't have an account yet? <b><a href="signup.html">Sign up</a></b> </p>
+
+
+
+        <button type="button" class="btn btn-default fb"> <img src="images/fbico.png" alt=""> Sign in with Facebook</button>
+        <button type="button" class="btn btn-default google"> <img src="images/googico.png" alt=""> Sign in with Google</button>
+      </div>
+    </div>
+  </body>
+</html>

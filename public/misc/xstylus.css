@@ -1,0 +1,68 @@
+.xbtn{
+  padding: 4px 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: bolder;
+  color: white;
+  background-color: #4d94ff;
+  border: 10px thin blue;
+}
+
+.xactive{
+  border: 1px dotted gray;
+  background-color:#e7e7e7 ;
+}
+.logo{
+  width:100px;
+  height: 50px;
+}
+.logo-bg{
+  background-color: Black;
+}
+body {
+  background-color: #bfbebe !important;
+  height: auto;
+}
+.container{
+  width: 90%;
+  height: auto;
+  background-color: #ffffff !important;
+}
+body > .nav-container{
+  width: 100%;
+  background-color: #fff;
+}
+body > .pagi-container{
+  border: 2px solid #e4e4e4;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  height: 200px;
+  background-color: #f7f7f7;
+  width: 100%;
+}
+.xpagination{
+  border: 2px solid gold;
+  list-style-type: none;
+  display: inline-block;
+}
+.xpagination > li{
+  font-size: 20px;
+  display: inline;
+}
+.xpagination > li > a{
+  font-family: monospace;
+  font-size: 20px;
+  display: inline;
+}
+.pagi-container > .pager{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80% !important;
+}
+.pagination > li > a {
+  background-color: transparent !important;
+}
+.pagi-container > .pager {
+  padding-top: 20px !important;
+}
