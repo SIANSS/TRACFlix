@@ -72,8 +72,9 @@ module.exports = function(passport) {
                         var newUser            = new User();
 
                         // set all of the facebook information in our user model
-                        newUser.local.email    = email;
-                        newUser.local.password = newUser.generateHash(password);
+                        newUser.local.email     = email;
+                        newUser.local.name      = req.body.fullname;
+                        newUser.local.password  = newUser.generateHash(password);
 
                         // save our user to the database
                         newUser.save(function(err) {
@@ -93,6 +94,7 @@ module.exports = function(passport) {
 
                 // update the current users facebook credentials
                 user.local.email    = email;
+                user.local.username = fullname;
                 user.local.password = user.generateHash(password);
                 // save the user
                 user.save(function(err) {

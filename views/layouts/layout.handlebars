@@ -22,8 +22,13 @@
             <li><a href="/add">Add</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            {{#if user}}
+              <li role="presentation"><a>{{user.local.email}}</a></li>
+              <li role="presentation"><a href="/logout">Logout</a></li>
+            {{else}}
             <li><a href="/signup"><span class="glyphicon glyphicon-user"> </span> Sign Up</a></li>
             <li><a href="/login"><span class="glyphicon glyphicon-log-in"> </span> Login</a></li>
+            {{/if}}
           </ul>
         </div>
       </nav>

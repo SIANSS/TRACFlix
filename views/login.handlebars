@@ -1,11 +1,14 @@
 <div class="supform">
   <div class="frm-cont">
     <span class="frm-login">Login</span>
-    <input id="mailer" name="email" type="email" class="email" placeholder="Email">
-    <p style="color:red;margin-left:32px;" id="mailmsg"></p>
-    <input id="passsword"  name="pwd" type="password" class="pwd" placeholder="Password">
-    <p id="Message" style="color:red;margin-left:32px;"></p>
-    <button type="button" class="btn btn-default btn-green" name="button" onclick="check(mailer, passsword); return false">Log in</button>
+    <form class="" action="/login" method="post">
+
+      <input id="mailer" name="email" type="email" class="email" placeholder="Email">
+      <p style="color:red;margin-left:32px;" id="mailmsg"></p>
+      <input id="passsword"  name="password" type="password" class="pwd" placeholder="Password">
+      <p id="Message" style="color:red;margin-left:32px;"></p>
+      <button type="submit" class="btn btn-default btn-green" name="button">Log in</button>
+    </form>
     <p class="loglink"><b><a href="/forgot">Forgot your password</a></b> </p>
     <p class="loglink">Don't have an account yet? <b><a href="/signup">Sign up</a></b> </p>
 
