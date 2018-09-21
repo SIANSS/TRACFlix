@@ -5,7 +5,7 @@ module.exports = (app, passport) =>{
       res.render('index', { user : req.user});
   })
 
-  app.get('/add', (req, res)=>{
+  app.get('/add', isLoggedIn, (req, res)=>{
     res.render('add', {user : req.user});
   });
 
