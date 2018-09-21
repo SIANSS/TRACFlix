@@ -28,6 +28,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 
+function createJwtToken(user) {
+  var payload = {
+    user: user,
+    iat: new Date().getTime(),
+    exp: moment().add('days', 7).valueOf()
+  };
+  return jwt.encode(payload, tokenSecret);
+}
 
 app.use(express.static(path.join(__dirname, 'public')));
 

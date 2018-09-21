@@ -255,11 +255,3 @@ var logins = [
       message.innerHTML = "Please Enter Email";
     }
   }
-
-
-  var getUrl = window.location;
-  var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
-  console.log(baseUrl);
-
-
-if(getUrl.pathname == '/')
