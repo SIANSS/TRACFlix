@@ -4,6 +4,7 @@ var path = require('path');
 var port     = process.env.PORT || 8080;
 var mongoose = require('mongoose');
 var exphbs = require('express-handlebars');
+
 var expressvalidator = require('express-validator');
 var passport = require('passport');
 var flash    = require('connect-flash');
@@ -27,15 +28,6 @@ app.use(morgan('dev')); // log every request to the console
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
-
-function createJwtToken(user) {
-  var payload = {
-    user: user,
-    iat: new Date().getTime(),
-    exp: moment().add('days', 7).valueOf()
-  };
-  return jwt.encode(payload, tokenSecret);
-}
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -70,6 +62,7 @@ app.use((req, res, next)=>{
 });
 
 require('./routes/')(app, passport); // load our routes and pass in our app and fully configured passport
+
 
 app.listen(port);
 console.log('The magic happens on port ' + port);

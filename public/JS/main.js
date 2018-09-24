@@ -3,13 +3,14 @@ var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.spli
 console.log(baseUrl);
 
 
-if(getUrl.pathname == '/'){
+if(getUrl.pathname === '/'){
   getall();
+  console.log(getUrl.pathname);
 }
 
 
 function getall(){
-  var xhrhttp = new XMLHttpRequest();
+  var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var data = JSON.parse(this.responseText);
