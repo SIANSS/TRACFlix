@@ -1,9 +1,16 @@
+const TVDB = require('node-tvdb');
+var http = require('http');
+var request = require('request');
+var Show = require('../models/show');
+var xml2js = require('xml2js');
+
+var Show = require('../models/show');
 module.exports = (app, passport) =>{
 
 
   app.get('/', (req, res)=>{
     res.render('index', { user : req.user});
-  })
+  });
 
   app.get('/add', isLoggedIn, (req, res)=>{
     res.render('add', {user : req.user});
@@ -49,19 +56,6 @@ module.exports = (app, passport) =>{
     successRedirect : '/',
     failureRedirect : '/login'
   }));
-
-  // // github --------------------------------
-  //
-  // // send to github to do the authentication
-  // app.get('/auth/github', passport.authenticate('github', { scope : 'email' }));
-  //
-  // // handle the callback after github has authenticated the user
-  // app.get('/auth/github/callback',
-  // passport.authenticate('github', {
-  //   successRedirect : '/profile',
-  //   failureRedirect : '/'
-  // }));
-
 
   // google ---------------------------------
 
@@ -170,9 +164,28 @@ module.exports = (app, passport) =>{
     });
   });
 
-  app.get('*', function(req, res) {
-    res.redirect('/#' + req.originalUrl);
+
+  app.get('/search/:id', function(req, res){
+    var parser = xml2js.Parser({
+      explicitArray: false,
+      normalizeTags: true
+    });
+    const tvdb = new TVDB('0YTLHQL6Q63URBKV');
+    tvdb.getSeriesByName(req.params.id).then((response, body) => {
+
+      for (var i = 0; i < response.length; i++) {
+        var newShow = new Show();
+
+        newShow._id : response[i].id;
+        newShow.name : response[i].seriesName;
+        newShow.firstAired : response.
+      }
+
+      res.send(response)
+    }).catch(error => { throw error });
   });
+
+
 };
 
 function isLoggedIn(req, res, next) {

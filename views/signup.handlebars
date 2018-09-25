@@ -3,20 +3,14 @@
 
     <span class="frm-login">Sign up</span>
     <form class="" action="/signup" method="post">
-    <input name="fullname" id="uname" type="text" class="uname" onblur="namevalidation(uname);" placeholder="Name">
+    <input name="fullname" id="uname" type="text" class="uname form-control" onblur="namevalidation(uname);" placeholder="Name">
     <p style="color:red;margin-left:32px;" id="namemsg"></p>
-    <input name="email" id="email" type="email" class="email" onblur="mailvalidate(email);" placeholder="Email">
+    <input name="email" id="email" type="email" class="email form-control" onblur="mailvalidate(email);" placeholder="Email">
     <p style="color:red;margin-left:32px;" id="mailmsg"></p>
-    <input name="password" id="pwd" type="password" class="pwd" onblur="passval(pwd);" placeholder="Password">
-    <div style="display:block; width:72%; border:2px solid gold; margin-left:40px; margin-right:auto;">
-<strong><p id="up" style="float:right;"> [!] UPPERCASE letters</p>
-      <p id="low"> [<span><strong>!</strong></span>] lowercase letters</p>
-      <p id="num" style="float:right;" > [<span><strong>!</strong></span>] Numbers </p>
-      <p id="length"> [<span><strong>!</strong></span>] Minimum 8 character</p></strong>
-    </div>
-
-    <p class="polpar">By Clicking on sign up. you agree to our <a href="#">terms & conditions</a> and <a href="#">privacy policy</a> </p>
-    <button id="btn-reg" type="submit" class="btn btn-default" name="btn-reg">Sign up</button>
+    <input name="password" id="pwd" type="password" class="pwd form-control" onblur="passval(pwd);" placeholder="Password">
+    <br>
+    <p class="polpar" style="margin-left:2%;">By Clicking on sign up. you agree to our <a href="#">terms & conditions</a> and <a href="#">privacy policy</a> </p>
+    <button id="btn-reg" type="submit" class="form-control btn btn-success" name="btn-reg">Sign up</button><br><br>
     <p class="loglink">Already have an account? <b><a href="login.html">Login Now</a></b> </p>
   </form>
   </div>

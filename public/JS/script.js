@@ -1,3 +1,6 @@
+var getUrl = window.location;
+var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+// console.log(getUrl.pathname);
 var goodColor = "#82FF84";
 var badColor = "#FF7476";
 
@@ -254,4 +257,26 @@ var logins = [
       message.style.color = badColor;
       message.innerHTML = "Please Enter Email";
     }
+  }
+
+
+  function search(x){
+    document.getElementById('rootus').innerHTML = "";
+    var dat = x.value;
+    console.log(dat);
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function (){
+      if(this.readyState == 4 && this.status == 200){
+        var data = JSON.parse(this.responseText);
+
+        console.log(data);
+        for (var i = 0; i < data.length; i++) {
+          document.getElementById('rootus').innerHTML += '<div class="imgframe S action horror adventure fantasy comedy show"> <!-- supernatural horror action comedy --><div class="img-holder"><a href="/getseries/'+data[i].id+'"><img src="'+data[i].banner+'" alt=""></a></div><div class="ititle"><p class="title">'+data[i].seriesName+'</p><p class="epsd"><b>Network :</b> '+data[i].network+'</p></div></div>'
+        }
+      }
+    }
+
+    xhttp.open("GET", baseUrl+"search/"+dat, true);
+    xhttp.send();
   }
