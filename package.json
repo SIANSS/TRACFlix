@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Uki Assignment 3 of Dimosian Ukistu01",
   "main": "server.js",
+  "engines": {
+    "node": "6.10.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
