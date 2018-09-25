@@ -25,10 +25,10 @@
             {{#if user}}
               {{#if user.facebook.id}}
                 <li role="presentation"><a>{{user.facebook.id}}</a></li>
+                <li role="presentation"><a href="/unlink/facebook">unlink</a></li>
               {{else}}
                 <li role="presentation"><a>{{user.local.email}}</a></li>
               {{/if}}
-              <li role="presentation"><a href="/unlink/facebook">unlink</a></li>
               <li role="presentation"><a href="/logout">Logout</a></li>
             {{else}}
             <li><a href="/signup"><span class="glyphicon glyphicon-user"> </span> Sign Up</a></li>
